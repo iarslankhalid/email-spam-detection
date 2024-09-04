@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c400ae33-1e0e-4ed3-b31c-33f67226fb0d" name="Changes" comment="adding files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/sample.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725357997673</updated>
-      <workItem from="1725357999136" duration="31250000" />
+      <workItem from="1725357999136" duration="32868000" />
     </task>
     <task id="LOCAL-00001" summary="adding files">
       <option name="closed" value="true" />
@@ -114,7 +115,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725470870674</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding files">
+      <option name="closed" value="true" />
+      <created>1725471228946</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725471228946</updated>
+    </task>
+    <task id="LOCAL-00004" summary="adding files">
+      <option name="closed" value="true" />
+      <created>1725471253426</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725471253426</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,7 +142,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
