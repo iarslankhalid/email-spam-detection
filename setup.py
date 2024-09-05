@@ -1,10 +1,10 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='src',
+    name='ml-project',
     packages=find_packages(),
     version='0.1.0',
-    description='General structure for machine learning projects',
+    description='Email Spam Detection',
     author='Arslan Khalid',
     license='MIT',
 )
