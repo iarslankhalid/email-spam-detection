@@ -1,1 +1,3 @@
 .idea
+.vscode
+src/data/__pycache__

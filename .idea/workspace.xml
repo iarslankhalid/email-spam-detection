@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c400ae33-1e0e-4ed3-b31c-33f67226fb0d" name="Changes" comment="relocating files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/make_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/make_dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/build_features.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/build_features.py" afterDir="false" />
+    <list default="true" id="c400ae33-1e0e-4ed3-b31c-33f67226fb0d" name="Changes" comment="adding files">
+      <change afterPath="$PROJECT_DIR$/data/interim/parsed_emails.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/parse_email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/over_sampling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/preprocessing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/vectorizing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725357997673</updated>
       <workItem from="1725357999136" duration="33328000" />
-      <workItem from="1725500433091" duration="8819000" />
+      <workItem from="1725500433091" duration="9132000" />
     </task>
     <task id="LOCAL-00001" summary="adding files">
       <option name="closed" value="true" />
@@ -187,7 +188,31 @@
       <option name="project" value="LOCAL" />
       <updated>1725502516110</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updating requirements.txt">
+      <option name="closed" value="true" />
+      <created>1725545450365</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725545450365</updated>
+    </task>
+    <task id="LOCAL-00010" summary="updating requirements.txt">
+      <option name="closed" value="true" />
+      <created>1725545625795</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725545625795</updated>
+    </task>
+    <task id="LOCAL-00011" summary="adding files">
+      <option name="closed" value="true" />
+      <created>1725545659328</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725545659328</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,11 +242,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding files" />
     <MESSAGE value="updating files" />
     <MESSAGE value="project structure" />
     <MESSAGE value="relocating files" />
-    <option name="LAST_COMMIT_MESSAGE" value="relocating files" />
+    <MESSAGE value="updating requirements.txt" />
+    <MESSAGE value="adding files" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding files" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
