@@ -65,7 +65,7 @@ if __name__ == '__main__':
     # Define file paths
     train_filepath = os.getenv('TRAIN_FILE', 'data/processed/train_data.pkl')
     test_filepath = os.getenv('TEST_FILE', 'data/processed/test_data.pkl')
-    model_filepath = os.getenv('MODEL_FILE', 'models/naive_bayes_model.pkl')
+    model_filepath = os.getenv('MODEL_FILE', 'models/spam_classifier_model.pkl')
 
     # Execute the main function
     main(train_filepath, test_filepath, model_filepath)
