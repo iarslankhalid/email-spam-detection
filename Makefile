@@ -1,4 +1,4 @@
-.PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3
+.PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3 run_setup run_app
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -76,6 +76,14 @@ endif
 test_environment:
 	$(PYTHON_INTERPRETER) test_environment.py
 
+## Run setup.py to check for models and train if necessary
+run_setup: requirements
+	$(PYTHON_INTERPRETER) setup.py
+
+## Run the GUI application
+run_app: run_setup
+	$(PYTHON_INTERPRETER) src/gui/run_app.py
+
 #################################################################################
 # PROJECT RULES                                                                 #
 #################################################################################
@@ -137,7 +145,7 @@ help:
 				line_length = ncol - indent - length(words[i]) - 1; \
 				printf "\n%*s ", -indent, " "; \
 			} \
-			printf "%s ", words[i]; \
+			printf "%s ", words[i]); \
 		} \
 		printf "\n"; \
 	}' \
