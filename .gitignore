@@ -1,3 +1,9 @@
 .idea
 .vscode
 src/data/__pycache__
+
+backup.bundle
+
+data/processed/train_data.pkl
+data/processed/test_data.pkl
+models/spam_classifier_model.pkl
