@@ -8,8 +8,8 @@ from parse_email import read_emails_from_folder
 
 
 @click.command()
-@click.argument('input_directory', type=click.Path(exists=True))
-@click.argument('output_directory', type=click.Path())
+@click.argument('input_directory', default = 'data/raw', type=click.Path(exists=True))
+@click.argument('output_directory', default = 'data/interim', type=click.Path())
 def main(input_directory, output_directory):
     """ Runs data processing scripts to turn raw data from (../raw) into
         cleaned data ready to be analyzed (saved in ../processed).
