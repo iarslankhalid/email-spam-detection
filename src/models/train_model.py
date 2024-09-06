@@ -3,9 +3,6 @@ import logging
 import joblib
 import os
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report
 from dotenv import load_dotenv, find_dotenv
 
@@ -31,37 +28,22 @@ def evaluate_model(model, X_test, y_test):
     report = classification_report(y_test, y_pred)
     return accuracy, report
 
-def train_models(X_train, y_train, X_test, y_test):
-    """Train multiple models and return the best performing model."""
-    models = {
-        "Naive Bayes": MultinomialNB(),
-        "Logistic Regression": LogisticRegression(max_iter=1000),
-        "Random Forest": RandomForestClassifier(),
-        "SVM": SVC()
-    }
+def train_naive_bayes(X_train, y_train, X_test, y_test):
+    """Train a Naive Bayes model and evaluate its performance."""
+    logger.info(f"Training Naive Bayes...")
+    model = MultinomialNB()
+    model.fit(X_train, y_train)
     
-    best_model = None
-    best_accuracy = 0
-    best_model_name = ""
+    # Evaluate the model
+    accuracy, report = evaluate_model(model, X_test, y_test)
     
-    for model_name, model in models.items():
-        logger.info(f"Training {model_name}...")
-        model.fit(X_train, y_train)
-        accuracy, report = evaluate_model(model, X_test, y_test)
-        
-        logger.info(f"Accuracy for {model_name}: {accuracy:.4f}")
-        logger.info(f"Classification Report for {model_name}:\n{report}")
-        
-        if accuracy > best_accuracy:
-            best_accuracy = accuracy
-            best_model = model
-            best_model_name = model_name
+    logger.info(f"Accuracy for Naive Bayes: {accuracy:.4f}")
+    logger.info(f"Classification Report for Naive Bayes:\n{report}")
     
-    logger.info(f"Best model is {best_model_name} with accuracy: {best_accuracy:.4f}")
-    return best_model, best_model_name, best_accuracy
+    return model, accuracy
 
 def main(train_filepath, test_filepath, model_filepath):
-    """Main function to load data, train models, and save the best performing model."""
+    """Main function to load data, train Naive Bayes model, and save the model."""
     
     # Load the training and testing datasets from pkl files
     logger.info(f"Loading training data from {train_filepath}")
@@ -70,12 +52,12 @@ def main(train_filepath, test_filepath, model_filepath):
     logger.info(f"Loading testing data from {test_filepath}")
     X_test, y_test = joblib.load(test_filepath)
 
-    # Train models and select the best one
-    best_model, best_model_name, best_accuracy = train_models(X_train, y_train, X_test, y_test)
+    # Train Naive Bayes model
+    model, accuracy = train_naive_bayes(X_train, y_train, X_test, y_test)
 
-    # Save the best model to disk
-    logger.info(f"Saving the best model ({best_model_name}) with accuracy {best_accuracy:.4f} to {model_filepath}")
-    joblib.dump(best_model, model_filepath)
+    # Save the trained model to disk
+    logger.info(f"Saving the Naive Bayes model with accuracy {accuracy:.4f} to {model_filepath}")
+    joblib.dump(model, model_filepath)
 
 if __name__ == '__main__':
     load_dotenv(find_dotenv())
@@ -83,7 +65,7 @@ if __name__ == '__main__':
     # Define file paths
     train_filepath = os.getenv('TRAIN_FILE', 'data/processed/train_data.pkl')
     test_filepath = os.getenv('TEST_FILE', 'data/processed/test_data.pkl')
-    model_filepath = os.getenv('MODEL_FILE', 'models/best_model.pkl')
+    model_filepath = os.getenv('MODEL_FILE', 'models/naive_bayes_model.pkl')
 
     # Execute the main function
     main(train_filepath, test_filepath, model_filepath)
