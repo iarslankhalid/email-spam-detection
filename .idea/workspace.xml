@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c400ae33-1e0e-4ed3-b31c-33f67226fb0d" name="Changes" comment="adding files">
-      <change afterPath="$PROJECT_DIR$/data/interim/parsed_emails.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/parse_email.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/over_sampling.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/preprocessing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/vectorizing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/make_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/make_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/build_features.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/build_features.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/over_sampling.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/over_sampling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/vectorizing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/vectorizing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/predict_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/predict_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725357997673</updated>
       <workItem from="1725357999136" duration="33328000" />
-      <workItem from="1725500433091" duration="9132000" />
+      <workItem from="1725500433091" duration="10784000" />
     </task>
     <task id="LOCAL-00001" summary="adding files">
       <option name="closed" value="true" />
