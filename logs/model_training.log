@@ -51,3 +51,18 @@ weighted avg       0.99      0.99      0.99      1681
 
 2024-09-06 16:29:03,448 - __main__ - INFO - Best model is SVM with accuracy: 0.9875
 2024-09-06 16:29:03,450 - __main__ - INFO - Saving the best model (SVM) with accuracy 0.9875 to models/spam_classifier_model.pkl
+2024-09-06 23:26:13,922 - __main__ - INFO - Loading training data from data/processed/train_data.pkl
+2024-09-06 23:26:14,085 - __main__ - INFO - Loading testing data from data/processed/test_data.pkl
+2024-09-06 23:26:14,141 - __main__ - INFO - Training Naive Bayes...
+2024-09-06 23:26:14,260 - __main__ - INFO - Accuracy for Naive Bayes: 0.9750
+2024-09-06 23:26:14,260 - __main__ - INFO - Classification Report for Naive Bayes:
+              precision    recall  f1-score   support
+
+           0       0.98      0.97      0.98       874
+           1       0.97      0.98      0.97       807
+
+    accuracy                           0.98      1681
+   macro avg       0.97      0.98      0.97      1681
+weighted avg       0.98      0.98      0.98      1681
+
+2024-09-06 23:26:14,262 - __main__ - INFO - Saving the Naive Bayes model with accuracy 0.9750 to models/spam_classifier_model.pkl
