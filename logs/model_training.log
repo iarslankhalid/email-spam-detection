@@ -1,0 +1,53 @@
+2024-09-06 15:23:43,477 - __main__ - INFO - Loading training data from data/processed/train_data.csv
+2024-09-06 16:28:26,652 - __main__ - INFO - Loading training data from data/processed/train_data.pkl
+2024-09-06 16:28:26,727 - __main__ - INFO - Loading testing data from data/processed/test_data.pkl
+2024-09-06 16:28:26,763 - __main__ - INFO - Training Naive Bayes...
+2024-09-06 16:28:26,852 - __main__ - INFO - Accuracy for Naive Bayes: 0.9750
+2024-09-06 16:28:26,852 - __main__ - INFO - Classification Report for Naive Bayes:
+              precision    recall  f1-score   support
+
+           0       0.98      0.97      0.98       874
+           1       0.97      0.98      0.97       807
+
+    accuracy                           0.98      1681
+   macro avg       0.97      0.98      0.97      1681
+weighted avg       0.98      0.98      0.98      1681
+
+2024-09-06 16:28:26,856 - __main__ - INFO - Training Logistic Regression...
+2024-09-06 16:28:27,113 - __main__ - INFO - Accuracy for Logistic Regression: 0.9839
+2024-09-06 16:28:27,113 - __main__ - INFO - Classification Report for Logistic Regression:
+              precision    recall  f1-score   support
+
+           0       0.99      0.98      0.98       874
+           1       0.98      0.99      0.98       807
+
+    accuracy                           0.98      1681
+   macro avg       0.98      0.98      0.98      1681
+weighted avg       0.98      0.98      0.98      1681
+
+2024-09-06 16:28:27,113 - __main__ - INFO - Training Random Forest...
+2024-09-06 16:28:32,684 - __main__ - INFO - Accuracy for Random Forest: 0.9756
+2024-09-06 16:28:32,684 - __main__ - INFO - Classification Report for Random Forest:
+              precision    recall  f1-score   support
+
+           0       1.00      0.95      0.98       874
+           1       0.95      1.00      0.98       807
+
+    accuracy                           0.98      1681
+   macro avg       0.98      0.98      0.98      1681
+weighted avg       0.98      0.98      0.98      1681
+
+2024-09-06 16:28:32,684 - __main__ - INFO - Training SVM...
+2024-09-06 16:29:03,432 - __main__ - INFO - Accuracy for SVM: 0.9875
+2024-09-06 16:29:03,448 - __main__ - INFO - Classification Report for SVM:
+              precision    recall  f1-score   support
+
+           0       0.98      0.99      0.99       874
+           1       0.99      0.98      0.99       807
+
+    accuracy                           0.99      1681
+   macro avg       0.99      0.99      0.99      1681
+weighted avg       0.99      0.99      0.99      1681
+
+2024-09-06 16:29:03,448 - __main__ - INFO - Best model is SVM with accuracy: 0.9875
+2024-09-06 16:29:03,450 - __main__ - INFO - Saving the best model (SVM) with accuracy 0.9875 to models/spam_classifier_model.pkl
