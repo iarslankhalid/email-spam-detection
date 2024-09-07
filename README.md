@@ -132,8 +132,6 @@ Once the setup is complete, the application will launch a simple **Email Spam Pr
 
 ### Sample GUI Screenshot:
 
-You can add a screenshot of the app here:
-
 ![App Screenshot](data/app-screenshot.png)
 
 ---
