@@ -1,12 +1,21 @@
-models/*.pkl filter=lfs diff=lfs merge=lfs -text
-data/processed/*.pkl filter=lfs diff=lfs merge=lfs -text
-*.pkl filter=lfs diff=lfs merge=lfs -text
+# Handle large binary files
+models/*.pkl filter=lfs diff=lfs merge=lfs -text linguist-vendored
+data/processed/*.pkl filter=lfs diff=lfs merge=lfs -text linguist-vendored
+*.pkl linguist-vendored
 
 # Mark Python files as the main language
 *.py linguist-language=Python
 
-# Ignore specific files or directories from language detection
+# Ignore non-code and dataset files from language detection
 Makefile linguist-vendored
 *.md linguist-documentation
 *.txt linguist-documentation
 *.sh linguist-vendored
+*.bat linguist-vendored
+LICENSE linguist-vendored
+.env linguist-vendored
+*.xml linguist-vendored
+
+# Handle dataset files with random names
+data/raw/* linguist-vendored  # Mark all raw data files as vendored
+data/external/* linguist-vendored  # Mark all external data files as vendored
