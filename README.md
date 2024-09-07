@@ -134,13 +134,13 @@ Once the setup is complete, the application will launch a simple **Email Spam Pr
 
 You can add a screenshot of the app here:
 
-![App Screenshot](add-your-image-link-here)
+![App Screenshot](data/app-screenshot.png)
 
 ---
 
 ## Dependencies
 
-- Python 3.x
+- `Python 3.11`
 - `Tkinter`
 - `scikit-learn`
 - `nltk`
