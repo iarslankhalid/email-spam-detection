@@ -1,36 +1,36 @@
-# Force all Python files to be recognized as Python
+# Force Python detection
 *.py linguist-language=Python
 *.py linguist-detectable=true
-*.py linguist-documentation=false
-*.py linguist-vendored=false
 
-# Explicitly override roff detection
-* -linguist-language=roff
-*.* -linguist-language=roff
+# Handle extensionless files in data directories
+data/raw/** linguist-vendored=true
+data/raw/** linguist-generated=true
+data/raw/** -linguist-language=roff
+data/raw/**/* linguist-vendored=true
+data/raw/**/* linguist-generated=true
+data/raw/**/* -linguist-language=roff
 
 # Documentation
 *.md linguist-documentation
 *.txt linguist-documentation
 README.* linguist-documentation
 
-# Vendored files
+# Notebooks
+*.ipynb linguist-documentation
+
+# Vendored files and directories
 *.pkl linguist-vendored
-models/*.pkl linguist-vendored
-data/processed/*.pkl linguist-vendored
+__pycache__/** linguist-vendored
+.ipynb_checkpoints/** linguist-vendored
+models/** linguist-vendored
 Makefile linguist-vendored
 *.sh linguist-vendored
 *.bat linguist-vendored
 LICENSE linguist-vendored
 .env linguist-vendored
 *.xml linguist-vendored
-data/raw/* linguist-vendored
-data/external/* linguist-vendored
 
 # Binary files
 *.pdf -diff -merge -text
 *.png -diff -merge -text
 *.jpg -diff -merge -text
-*.jpeg -diff -merge -text
-*.gif -diff -merge -text
-*.ico -diff -merge -text
-*.zip -diff -merge -text
