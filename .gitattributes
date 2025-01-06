@@ -1,21 +1,46 @@
-# Handle large binary files
-models/*.pkl filter=lfs diff=lfs merge=lfs -text linguist-vendored
-data/processed/*.pkl filter=lfs diff=lfs merge=lfs -text linguist-vendored
-*.pkl linguist-vendored
+# Auto detect text files and perform LF normalization
+* text=auto
 
 # Mark Python files as the main language
 *.py linguist-language=Python
+*.py linguist-detectable=true
 
-# Ignore non-code and dataset files from language detection
-Makefile linguist-vendored
-*.md linguist-documentation
-*.txt linguist-documentation
-*.sh linguist-vendored
-*.bat linguist-vendored
-LICENSE linguist-vendored
-.env linguist-vendored
-*.xml linguist-vendored
+# Handle large binary files
+*.pkl filter=lfs diff=lfs merge=lfs -text
+*.pkl linguist-vendored=true
+models/*.pkl filter=lfs diff=lfs merge=lfs -text linguist-vendored=true
+data/processed/*.pkl filter=lfs diff=lfs merge=lfs -text linguist-vendored=true
 
-# Handle dataset files with random names
-data/raw/* linguist-vendored  # Mark all raw data files as vendored
-data/external/* linguist-vendored  # Mark all external data files as vendored
+# Documentation
+*.md linguist-documentation=true
+*.txt linguist-documentation=true
+README.* linguist-documentation=true
+
+# Ignore these files from language statistics
+Makefile linguist-vendored=true
+*.sh linguist-vendored=true
+*.bat linguist-vendored=true
+LICENSE linguist-vendored=true
+.env linguist-vendored=true
+*.xml linguist-vendored=true
+
+# Handle dataset files
+data/raw/* linguist-vendored=true
+data/external/* linguist-vendored=true
+
+# Explicitly mark common binary formats
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.zip binary
+*.7z binary
+*.ttf binary
+
+# Explicitly mark these file types as non-roff
+* -linguist-language=roff
